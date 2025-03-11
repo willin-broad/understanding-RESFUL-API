@@ -1,0 +1,10 @@
+args {
+    djangodbname "djangodb"
+}
+
+services db:{
+    image:"ghcr.io/acorn-io/mariadb:v10.11.5-1"
+    service.args:{
+        dbName: args.djangodbname
+    }
+}
